@@ -1,0 +1,54 @@
+class A extends java.lang.Object
+{
+    A x;
+
+    void <init>()
+    {
+        A r0;
+
+        r0 := @this: A;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void foo(A)
+    {
+        java.io.PrintStream $r3;
+        A r0, $r1, $r2, r4;
+
+        r4 := @this: A;
+
+        r0 := @parameter0: A;
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        $r1 = r0.<A: A x>;
+
+        $r2 = $r1.<A: A x>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.Object)>($r2);
+
+        return;
+    }
+
+    void bar(A)
+    {
+        A r0, $r1, $r2, r3;
+
+        r3 := @this: A;
+
+        r0 := @parameter0: A;
+
+        $r2 = r0.<A: A x>;
+
+        $r1 = new A;
+
+        specialinvoke $r1.<A: void <init>()>();
+
+        $r2.<A: A x> = $r1;
+
+        return;
+    }
+}
